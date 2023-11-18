@@ -1,3 +1,4 @@
+/* Styling for the countdown container */
 .flip-cd {
   position: relative;
   display: inline-flex;
@@ -8,6 +9,7 @@
   perspective: 400px;
 }
 
+/* Styling for the flip animation elements (top, bottom, top-flip, bottom-flip) */
 .top,
 .bottom,
 .top-flip,
@@ -35,6 +37,7 @@
   border-bottom-left-radius: 0.1em;
 }
 
+/* Styling for the top flip animation */
 .flip-cd .top-flip {
   position: absolute;
   width: 100%;
@@ -52,6 +55,7 @@
   }
 }
 
+/* Styling for the bottom flip animation */
 .flip-cd .bottom-flip {
   position: absolute;
   bottom: 0;
@@ -71,6 +75,7 @@
   }
 }
 
+/* Styling for the countdown container */
 .container-count-down {
   height: max-content;
   width: 100%;
@@ -84,6 +89,7 @@
   align-items: center;
 }
 
+/* Styling for the countdown segment container */
 .container-segment {
   display: flex;
   flex-direction: column;
@@ -91,16 +97,19 @@
   align-items: center;
 }
 
+/* Styling for the countdown segment */
 .segment {
   display: flex;
   gap: 0.1em;
 }
 
+/* Styling for the segment title */
 .segment-title {
   font-size: 2.5rem;
   color: white;
 }
 
+/* Styling for the input and button elements */
 .btn-input {
   min-width: 90px !important;
   max-width: 90px !important;
@@ -111,17 +120,19 @@
   font-size: 1.3rem;
   cursor: pointer;
   transition: 0.5s;
-  /* color: #6c44cd; */
   font-family: 'Stylish', serif;
   font-weight: 500;
   margin: 10px;
   transition: 0.8s;
 }
-.btn-input:hover{
-  /* background-color: #6c44cd; */
+
+/* Hover styling for the button element */
+.btn-input:hover {
   color: white;
 }
-input[type='number']{
+
+/* Styling for the number input */
+input[type='number'] {
   min-width: 90px !important;
   max-width: 90px !important;
   text-align: center;
@@ -131,14 +142,16 @@ input[type='number']{
   outline: none;
   border: none;
 }
-input:target{
+
+/* Styling for the number input on focus */
+input:target {
   outline: none;
   border: none;
 }
 
-
-@media (max-width:500px){
-  .container-count-down{
+/* Media query for responsive design */
+@media (max-width:500px) {
+  .container-count-down {
     font-size: 2.8rem;
     letter-spacing: 3px;
   }
@@ -146,5 +159,4 @@ input:target{
     font-size: 1.2rem;
     color: white;
   }
-
 }

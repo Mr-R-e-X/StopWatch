@@ -1,17 +1,20 @@
 /* Basic Body Styling */
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
     min-width: 375px;
     background-position: center;
     transition: 0.5s;
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     display: none;
 }
+
 /* Setting Video as background */
 video {
     width: 100%;
@@ -23,13 +26,18 @@ video {
     left: 0;
     z-index: -99;
 }
+
 /***********************************************************/
 /* Making Flip Animation */
 /***********************************************************/
+
+/* Styling for the flip card container */
 .flip-card {
     background-color: transparent;
     perspective: 10000px; /*Remove this if you don't want the 3D effect*/
 }
+
+/* Styling for the flip card inner container */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -39,7 +47,9 @@ video {
     transform-style: preserve-3d;
 }
 
-.flip-card-front, .flip-card-back {
+/* Styling for the front and back faces of the flip card */
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -47,21 +57,22 @@ video {
     backface-visibility: hidden;
 }
 
+/* Styling for the back face of the flip card */
 .flip-card-back {
     background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
 }
+
 /*******************************************************************/
 /* Flip Animation Finished */
 /*******************************************************************/
 
 /* Count Down Styling */
-.container{
+.container {
     display: flex;
     position: relative;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     left: 10%;
     top: 10%;
@@ -69,26 +80,31 @@ video {
     height: 80vh;
     color: azure;
 }
-h1{
+
+h1 {
     text-align: center;
     font-size: 4rem;
     color: white;
     animation: Color 4s ease-in-out infinite;
     text-shadow: 4px 1px #F0F0F0;
 }
-.digit{
+
+.digit {
     font-size: 5rem;
     color: #fff;
-    /* animation: digitColor 3s ease-in-out infinite;; */
 }
-.txt{
+
+.txt {
     font-size: 1.5rem;
     color: #fffcd6;
 }
-#btns{
+
+#btns {
     margin-top: 50px;
 }
-.btn{
+
+/* Styling for buttons */
+.btn {
     width: 10vw;
     min-width: max-content;
     padding: 10px 15px;
@@ -101,88 +117,81 @@ h1{
     font-family: 'Stylish', serif;
     font-weight: 500;
     margin: 10px;
-
 }
-#start{
+
+/* Styling for start button */
+#start {
     background-color: #009779;
     transition: 0.5s;
 }
-#start:hover{
+
+#start:hover {
     color: #009779;
     background-color: #fff;
     box-shadow: 6px 6px 1px #8ef3dfa0;
     font-weight: 500;
 }
-#stop{
+
+/* Styling for stop button */
+#stop {
     background-color: #0e85fc;
     transition: 0.5s;
 }
-#stop:hover{
+
+#stop:hover {
     color: #0e85fc;
     background-color: #fff;
     box-shadow: 6px 6px 1px rgba(127, 254, 229, 0.575);
     font-weight: 500;
 }
-#reset{
+
+/* Styling for reset button */
+#reset {
     background-color: #c91400;
     transition: 0.5s;
 }
-#reset:hover{
+
+#reset:hover {
     color: #c91400;
     background-color: #fff;
     box-shadow: 6px 6px 1px #ed796c9d;
     font-weight: 500;
 }
-@keyframes Color{
-    0%{
+
+/* Keyframe animation for color change */
+@keyframes Color {
+    0% {
         text-shadow: 4px 1px #A0D468;
     }
 
-    20%{
+    20% {
         text-shadow: 4px 1px #4FC1E9;
     }
 
-    40%{
+    40% {
         text-shadow: 4px 1px #FFCE54;
     }
 
-    60%{
-
+    60% {
         text-shadow: 4px 1px #FC6E51;
     }
 
-    80%{
+    80% {
         text-shadow: 4px 1px #ED5565;
     }
 
-    100%{
+    100% {
         text-shadow: 4px 1px #6c44cd;
     }
 }
 
-/* @keyframes digitColor {
-    0%{
-        color: #e0201a;
-    }
-    50%{
-        color: #256ae5;
-    }
-    100%{
-        color: #ffed00;
-    }
-} */
-/* **************************************************** */
-
-
-/*********************************************************/
-
-/* Flip Button Styling */
-#toggle-flip{
+/* Styling for the flip button */
+#toggle-flip {
     display: flex;
     justify-content: center;
 }
 
-.flip-btn{
+.flip-btn {
     min-width: max-content;
     position: absolute;
     top: 80%;
@@ -198,20 +207,21 @@ h1{
     margin: 10px;
     transition: 0.8s;
 }
-.flip-btn:hover{
+
+.flip-btn:hover {
     color: white;
     background-color: #6c44cd;
     box-shadow: 6px 6px 1px #9971f5;
 }
-/* handeling responsiveness */
-@media (max-width:500px){
-    h1{
+
+/* Handling responsiveness */
+@media (max-width:500px) {
+    h1 {
         font-size: 2.8rem;
         text-shadow: 2px 1px #F0F0F0;
         letter-spacing: 3px;
-
     }
-    .digit{
+    .digit {
         font-size: 2.8rem;
     }
 }
