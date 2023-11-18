@@ -1,4 +1,7 @@
 /* Basic Body Styling */
+:root{
+    --img1: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRheeouTsFLuLqCxn-DctNMJ3JEWK8KACMkAw&usqp=CAU);
+}
 * {
     box-sizing: border-box;
 }
@@ -7,7 +10,10 @@ body {
     margin: 0;
     padding: 0;
     min-width: 375px;
-    background-position: center;
+    background-image: var(--img1);
+    background-size: cover;
+    /* object-fit: cover; */
+    /* background-position: center; */
     transition: 0.5s;
 }
 
@@ -16,7 +22,7 @@ body::-webkit-scrollbar {
 }
 
 /* Setting Video as background */
-video {
+/* video {
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -25,7 +31,7 @@ video {
     top: 0;
     left: 0;
     z-index: -99;
-}
+} */
 
 /***********************************************************/
 /* Making Flip Animation */
