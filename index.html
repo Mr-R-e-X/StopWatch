@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="countDown.css">
+</head>
+<body>
+    <video muted autoplay loop>
+        <!-- <source src="/video/earth_-_1236 (Original).mp4" type="video/mp4"> -->
+        <source src="./video/squares_-_1200 (Original).mp4" type="video/mp4">
+    </video>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="container">
+                <h1>Stop Watch</h1>
+                <div id="time">
+                    <span id="hr" class="digit">00</span>
+                    <span class="txt">hr</span>
+                    <span id="min" class="digit">00</span>
+                    <span class="txt">min</span>
+                    <span id="sec" class="digit">00</span>
+                    <span class="txt">sec</span>
+                    <span id="count" class="digit">00</span>
+                </div>
+                <div id="btns">
+                    <button class="btn" id="start">Start</button>
+                    <button class="btn" id="stop">Pause</button>
+                    <button class="btn" id="reset">Reset</button>
+                </div>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div>
+                <h1>Count Down Timer</h1>
+                <div class="container-count-down">
+                  <div class="container-segment">
+                    <div class="segment-title">Hours</div>
+                    <div class="segment">
+                      <div class="flip-cd" data-hours-tens>
+                        <div class="top">2</div>
+                        <div class="bottom">2</div>
+                      </div>
+                      <div class="flip-cd" data-hours-ones>
+                        <div class="top">4</div>
+                        <div class="bottom">4</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container-segment">
+                    <div class="segment-title">Minutes</div>
+                    <div class="segment">
+                      <div class="flip-cd" data-minutes-tens>
+                        <div class="top">0</div>
+                        <div class="bottom">0</div>
+                      </div>
+                      <div class="flip-cd" data-minutes-ones>
+                        <div class="top">0</div>
+                        <div class="bottom">0</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container-segment">
+                    <div class="segment-title">Seconds</div>
+                    <div class="segment">
+                      <div class="flip-cd" data-seconds-tens>
+                        <div class="top">0</div>
+                        <div class="bottom">0</div>
+                      </div>
+                      <div class="flip-cd" data-seconds-ones>
+                        <div class="top">0</div>
+                        <div class="bottom">0</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form style="margin-top: 30px;">
+                  <input type="number" name="inputHours" class="collectHr" placeholder="Hours" required>
+                  <input type="number" name="inputMinutes" class="collectMin" placeholder="Minutes" required>
+                  <input type="number" name="inputSeconds" class="collectSec" placeholder="Seconds" required>
+                  <div id="btns" style="margin-top: 0px;">
+                    <button type="button" id="start" class="btn-input" onclick="countDownStartEvent()">Start</button>
+                  </div>
+                </form>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+    
+    <div id="toggle-flip">
+        <button class="flip-btn" onclick="flipToggleCntrl()">Click Here For Count Down Timer</button>
+    </div>
+<script src="countDown.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

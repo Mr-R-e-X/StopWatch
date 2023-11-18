@@ -1,0 +1,150 @@
+.flip-cd {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.1em;
+  color: #de4848;
+  perspective: 400px;
+}
+
+.top,
+.bottom,
+.top-flip,
+.bottom-flip {
+  height: 0.75em;
+  line-height: 1;
+  padding: 0.25em;
+  overflow: hidden;
+}
+
+.top,
+.flip-cd .top-flip {
+  background-color: #f7f7f783;
+  border-top-right-radius: 0.1em;
+  border-top-left-radius: 0.1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bottom,
+.flip-cd .bottom-flip {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: 0.1em;
+  border-bottom-left-radius: 0.1em;
+}
+
+.flip-cd .top-flip {
+  position: absolute;
+  width: 100%;
+  animation: flip-top 500ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50%,
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+.flip-cd .bottom-flip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: flip-bottom 500ms ease-out;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+  0%,
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.container-count-down {
+  height: max-content;
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 0.5em;
+  flex-direction: row;
+  font-family: "Stylish", serif;
+  font-size: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-segment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  align-items: center;
+}
+
+.segment {
+  display: flex;
+  gap: 0.1em;
+}
+
+.segment-title {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.btn-input {
+  min-width: 90px !important;
+  max-width: 90px !important;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 2px 15px 2px 15px;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.5s;
+  /* color: #6c44cd; */
+  font-family: 'Stylish', serif;
+  font-weight: 500;
+  margin: 10px;
+  transition: 0.8s;
+}
+.btn-input:hover{
+  /* background-color: #6c44cd; */
+  color: white;
+}
+input[type='number']{
+  min-width: 90px !important;
+  max-width: 90px !important;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 1.3rem;
+  border-radius: 2px 15px 2px 15px;
+  outline: none;
+  border: none;
+}
+input:target{
+  outline: none;
+  border: none;
+}
+
+
+@media (max-width:500px){
+  .container-count-down{
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+  }
+  .segment-title {
+    font-size: 1.2rem;
+    color: white;
+  }
+
+}
