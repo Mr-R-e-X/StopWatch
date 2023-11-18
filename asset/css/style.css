@@ -1,7 +1,4 @@
 /* Basic Body Styling */
-:root{
-    --img1: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRheeouTsFLuLqCxn-DctNMJ3JEWK8KACMkAw&usqp=CAU);
-}
 * {
     box-sizing: border-box;
 }
@@ -10,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     min-width: 375px;
-    background-image: var(--img1);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRheeouTsFLuLqCxn-DctNMJ3JEWK8KACMkAw&usqp=CAU);
     background-size: cover;
     transition: 0.5s;
 }
