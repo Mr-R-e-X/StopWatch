@@ -7,8 +7,7 @@ body {
     margin: 0;
     padding: 0;
     min-width: 375px;
-    background-image: url('../video/outrun-neon-dark-background-purple-3840x2160-4523.jpg');
-    background-size: cover;
+    background-color: rgb(225, 179, 120);
     transition: 0.5s;
 }
 
