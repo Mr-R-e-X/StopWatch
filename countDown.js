@@ -16,16 +16,6 @@ function startCountDown(givenTime){
   startInterval(givenTime)
 }
 
-let pauseEvent = true;
-function pauseEventToggle(pauseEvent){
-  pauseEvent = !pauseEvent;
-}
-
-function countDownPauseEvent(){
-  pauseEventToggle(pauseEvent);
-  console.log(`Pause Event inside`)
-}
-
 let startInterval = (givenTime)=>{
   window.setInterval(() => {
     if(givenTime!=countTime){
