@@ -1,7 +1,7 @@
 // Initialize variables for given time and count time
 let givenTime = 0;
 let countTime = 0;
-
+let countdownInterval; // Store the interval reference to clear it later
 // Function to handle the start of the countdown
 function countDownStartEvent() {
   // Set pauseEvent to true to indicate countdown is not paused
@@ -46,7 +46,7 @@ function startCountDown(givenTime) {
 
 // Function to start the countdown interval
 let startInterval = (givenTime) => {
-  window.setInterval(() => {
+  countdownInterval = window.setInterval(() => {
     // Check if the countdown is not paused and there is time remaining
     if (pauseEvent) {
       if (givenTime != countTime) {
@@ -56,6 +56,23 @@ let startInterval = (givenTime) => {
       }
     }
   }, 1000);
+}
+
+// Function to reset the countdown
+function countDownResetEvent(){
+  clearInterval(countdownInterval);
+  givenTime = 0;
+  countTime = 0;
+  clearDigitsDisplay();
+}
+// Function to clear the displayed digits (replace this with your actual logic)
+function clearDigitsDisplay() {
+  flip(document.querySelector("[data-hours-tens]"), 0);
+  flip(document.querySelector("[data-hours-ones]"), 0);
+  flip(document.querySelector("[data-minutes-tens]"), 0);
+  flip(document.querySelector("[data-minutes-ones]"), 0);
+  flip(document.querySelector("[data-seconds-tens]"), 0);
+  flip(document.querySelector("[data-seconds-ones]"), 0);
 }
 
 // Function to update the displayed countdown
