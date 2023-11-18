@@ -6,15 +6,16 @@ let resetBtn = document.querySelector('#reset');
 let hour = 0 , minute = 0 , second = 0 , count = 0;
 let timer;
 
+// start btn
 startBtn.addEventListener('click',()=>{
     timer = true;
     stopWatch();
 })
-
+// pause btn
 stopBtn.addEventListener('click',()=>{
     timer = false;
 })
-
+// reset btn
 resetBtn.addEventListener('click',()=>{
     timer = false;
     hour =0; minute =0; second =0; count =0;
@@ -23,6 +24,8 @@ resetBtn.addEventListener('click',()=>{
     document.getElementById('sec').innerHTML = "00";
     document.getElementById('count').innerHTML = "00";
 });
+
+// contrilling with space btns the start and pause event
 let clickSpace = false;
 
 function toggleSpace(){
@@ -49,7 +52,7 @@ document.addEventListener('keypress', (e)=>{
     }
 
 })
-
+// Stop Watch main function
 function stopWatch(){
     if(timer){
         count++;

@@ -1,6 +1,7 @@
 let givenTime = 0;
 let countTime = 0;
 function countDownStartEvent(){
+  pauseEvent = true;
   if(givenTime ==0){
     let collectHr = document.querySelector('.collectHr');
     let collectMin = document.querySelector('.collectMin');
@@ -12,16 +13,30 @@ function countDownStartEvent(){
     startCountDown(givenTime);
   }
 }
+
+let pauseEvent = true;
+function pauseEventToggle(){
+  pauseEvent = !pauseEvent
+}
+function countDownPauseEvent(){
+  pauseEventToggle();
+}
+function countDownResetEvent(){
+    givenTime = 0;
+    flipAllCards(givenTime);
+    window.clearInterval(startInterval)
+}
 function startCountDown(givenTime){
   startInterval(givenTime)
 }
 
 let startInterval = (givenTime)=>{
   window.setInterval(() => {
-    if(givenTime!=countTime){
-      flipAllCards(givenTime);
-      // console.log(`Hr ${Math.floor(givenTime / 3600)} Min ${Math.floor(givenTime / 60) % 60} Sec ${givenTime%60}`);
-      givenTime--;
+    if(pauseEvent){
+      if(givenTime!=countTime){
+        flipAllCards(givenTime);
+        givenTime--;
+      }
     }
   }, 1000)
 }
