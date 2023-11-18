@@ -21,11 +21,6 @@ function pauseEventToggle(){
 function countDownPauseEvent(){
   pauseEventToggle();
 }
-function countDownResetEvent(){
-    givenTime = 0;
-    flipAllCards(givenTime);
-    window.clearInterval(startInterval)
-}
 function startCountDown(givenTime){
   startInterval(givenTime)
 }
