@@ -12,8 +12,6 @@ body {
     min-width: 375px;
     background-image: var(--img1);
     background-size: cover;
-    /* object-fit: cover; */
-    /* background-position: center; */
     transition: 0.5s;
 }
 
